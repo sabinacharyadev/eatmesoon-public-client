@@ -4,6 +4,8 @@ import AuthPage from "./pages/AuthPage";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 
+import { ToastContainer } from "react-toastify";
+
 function App() {
   return (
     <>
@@ -14,6 +16,7 @@ function App() {
           <Route path="register" element={<SignupForm />} />
         </Route>
       </Routes>
+      <ToastContainer />
     </>
   );
 }
