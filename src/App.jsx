@@ -5,6 +5,7 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 
 import { ToastContainer } from "react-toastify";
+import VerifyUserPage from "./pages/VerifyUserPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="login" element={<LoginForm />} />
           <Route path="register" element={<SignupForm />} />
         </Route>
+        <Route path="verify_user" element={<VerifyUserPage />}></Route>
       </Routes>
       <ToastContainer />
     </>

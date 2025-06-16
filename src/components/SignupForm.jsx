@@ -23,7 +23,7 @@ const SignupForm = () => {
   const registerUser = async (userObject) => {
     const result = await createUser(userObject);
     console.log(result);
-    toast(result);
+    toast(result.message);
   };
 
   const handleOnSubmit = (e) => {

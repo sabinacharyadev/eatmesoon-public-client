@@ -21,3 +21,14 @@ export const createUser = (userObject) => {
     });
   return response;
 };
+
+// Verify | PATCH
+export const verifyUserAxios = (patchObject) => {
+  const response = axios
+    .patch(USER_API_URL, patchObject)
+    .then((res) => res.data)
+    .catch((error) => {
+      console.log(error);
+    });
+  return response;
+};
