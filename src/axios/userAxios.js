@@ -32,3 +32,27 @@ export const verifyUserAxios = (patchObject) => {
     });
   return response;
 };
+
+// Login | POST
+export const loginUserAxios = (loginObject) => {
+  const response = axios
+    .post(USER_API_URL + "/login", loginObject)
+    .then((res) => res.data)
+    .catch((error) => console.log(error));
+  return response;
+};
+
+// Private EndPoint
+// GET User | GET
+export const getUserAxios = () => {
+  const response = axios
+    .get(USER_API_URL, {
+      headers: {
+        Authorization: sessionStorage.getItem("accessJWT"),
+      },
+    })
+    .then((res) => res.data)
+    .catch((error) => console.log(error));
+
+  return response;
+};
